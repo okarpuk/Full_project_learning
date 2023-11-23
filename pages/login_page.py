@@ -13,6 +13,23 @@ class Login_page(Base):
         super().__init__(driver)
         self.driver = driver
 
+# Locators
+    user_name = "//input[@id='user-name']"
+    password = "//input[@id='password']"
+    button_login = "//input[@id='login-button']"
+
+# Getters
+    def get_user_name(self):
+        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.user_name)))
+
+    def get_password(self):
+        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.password)))
+
+    def get_button_login(self):
+        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.button_login)))
+
+
+
     def authorization(self, user_field, password_field):
         user_name = WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, "//input[@id='user-name']")))
         user_name.send_keys(user_field)
