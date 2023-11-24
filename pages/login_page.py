@@ -41,18 +41,13 @@ class Login_page(Base):
         self.get_button_login().click()
         print("Login button clicked")
 
+    def authorization(self):
+        self.driver.get(self.url)
+        self.driver.maximize_window()
+        self.input_user_name("standard_user")
+        self.input_password("secret_sauce")
+        self.click_login_button()
 
 
-    def authorization(self, user_field, password_field):
-        user_name = WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, "//input[@id='user-name']")))
-        user_name.send_keys(user_field)
-        print("Login entered")
 
-        password = WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, "//input[@id='password']")))
-        password.send_keys(password_field)
-        print("Password entered")
-        time.sleep(3)
 
-        button_login = WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, "//input[@id='login-button']")))
-        button_login.click()
-        print("Login clicked")
