@@ -29,11 +29,17 @@ class Login_page(Base):
         return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.button_login)))
 
 # Actions
+    def input_user_name(self, user_name):
+        self.get_user_name().send_keys(user_name)
+        print("User name entered")
 
+    def input_password(self, password):
+        self.get_password().send_keys(password)
+        print("Password entered")
 
-
-
-
+    def click_login_button(self):
+        self.get_button_login().click()
+        print("Login button clicked")
 
 
 
