@@ -5,7 +5,7 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from pages.login_page import Login_page
 
-def test_select_product():
+def test_buy_product():
     driver = webdriver.Chrome()
     print("Test started")
 
