@@ -45,6 +45,7 @@ class Login_page(Base):
         self.driver.get(self.url)
         self.driver.delete_all_cookies()
         self.driver.maximize_window()
+        self.get_current_url()
         self.input_user_name("standard_user")
         self.input_password("secret_sauce")
         self.click_login_button()
