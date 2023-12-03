@@ -34,3 +34,5 @@ class Main_page(Base):
         self.get_current_url()
         self.click_add_to_cart_button()
         self.click_cart_button()
+        self.get_current_url()
+
