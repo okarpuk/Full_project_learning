@@ -5,7 +5,6 @@ from pages.login_page import Login_page
 from pages.main_page import Main_page
 from pages.user_info_page import User_info_page
 
-
 def test_buy_product():
     driver = webdriver.Chrome()
     print("Test started")
