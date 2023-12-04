@@ -21,6 +21,6 @@ class Cart_page(Base):
         self.get_checkout_button().click()
         print("Checkout button clicked")
 
-    def go_to_checkout(self):
+    def confirm_product(self):
         self.click_checkout_button()
         self.get_current_url()
