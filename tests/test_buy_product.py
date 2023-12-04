@@ -3,6 +3,7 @@ from selenium import webdriver
 from pages.cart_page import Cart_page
 from pages.login_page import Login_page
 from pages.main_page import Main_page
+from pages.user_info_page import User_info_page
 
 
 def test_buy_product():
@@ -17,5 +18,8 @@ def test_buy_product():
 
     cp = Cart_page(driver)
     cp.confirm_product()
+
+    uip = User_info_page(driver)
+    uip.confirm_user_info()
 
     time.sleep(5)
