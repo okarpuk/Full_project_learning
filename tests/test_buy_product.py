@@ -1,6 +1,7 @@
 import time
 from selenium import webdriver
 from pages.cart_page import Cart_page
+from pages.last_page import Last_page
 from pages.login_page import Login_page
 from pages.main_page import Main_page
 from pages.payment_page import Payment_page
@@ -24,5 +25,8 @@ def test_buy_product():
 
     pp = Payment_page(driver)
     pp.click_finish_button()
+
+    lp = Last_page(driver)
+    lp.create_screenshot()
 
     time.sleep(5)
