@@ -19,12 +19,10 @@ class Base():
     def screenshot(self):
         current_date_time = datetime.datetime.utcnow().strftime("%Y.%m.%d.%H.%M.%S")
         screenshot_name = 'screenshot' + current_date_time + '.png'
-        self.driver.save_screenshot('Users\\okarpuk\\PycharmProjects\\Full_project_learning\\screen\\' + screenshot_name)
+        self.driver.save_screenshot('/Users/okarpuk/PycharmProjects/Full_project_learning/screen//' + screenshot_name)
 
 # Method assert URL
     def assert_url(self, result):
         get_url = self.driver.current_url
         assert get_url == result
         print("URL correct")
-
-
