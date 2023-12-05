@@ -21,7 +21,6 @@ class Main_page(Base):
         return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.cart_button)))
 
 # Actions
-
     def click_add_to_cart_button(self):
         self.get_add_to_cart_button().click()
         print("Add to cart button clicked")
@@ -35,4 +34,3 @@ class Main_page(Base):
         self.click_add_to_cart_button()
         self.click_cart_button()
         self.get_current_url()
-
