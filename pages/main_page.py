@@ -12,6 +12,7 @@ class Main_page(Base):
 # Locators
     add_to_cart_button = "//button[@id='add-to-cart-sauce-labs-backpack']"
     cart_button = "//div[@id='shopping_cart_container']"
+    menu_button = "//button[@id='react-burger-menu-btn']"
 
 # Getters
     def get_add_to_cart_button(self):
@@ -19,6 +20,9 @@ class Main_page(Base):
 
     def get_cart_button(self):
         return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.cart_button)))
+
+    def get_menu_button(self):
+        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.menu_button)))
 
 # Actions
     def click_add_to_cart_button(self):
@@ -28,6 +32,11 @@ class Main_page(Base):
     def click_cart_button(self):
         self.get_cart_button().click()
         print("Cart button clicked")
+
+    def click_menu_button(self):
+        self.get_menu_button().click()
+        print("Menu button clicked")
+
 
     def select_product(self):
         self.get_current_url()
