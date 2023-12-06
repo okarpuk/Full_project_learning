@@ -1,11 +1,7 @@
 import time
 from selenium import webdriver
-from pages.cart_page import Cart_page
-from pages.last_page import Last_page
 from pages.login_page import Login_page
 from pages.main_page import Main_page
-from pages.payment_page import Payment_page
-from pages.user_info_page import User_info_page
 
 def test_about_link():
     driver = webdriver.Chrome()
@@ -15,10 +11,6 @@ def test_about_link():
     login.authorization()
 
     mp = Main_page(driver)
-    mp.select_product()
+    mp.select_menu_about()
 
-
-
-
-
-    time.sleep(5)
+    time.sleep(3)
