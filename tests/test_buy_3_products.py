@@ -5,8 +5,8 @@ from pages.cart_page import Cart_page
 from pages.login_page import Login_page
 from pages.main_page import Main_page
 
-@pytest.mark.order(3)
-def test_buy_product_1():
+#@pytest.mark.order(3)
+def test_buy_product_1(set_up):
     driver = webdriver.Chrome()
     print("\nTest 1 started")
 
@@ -23,7 +23,7 @@ def test_buy_product_1():
     time.sleep(3)
     driver.quit()
 
-@pytest.mark.order(1)
+#@pytest.mark.order(1)
 def test_buy_product_2():
     driver = webdriver.Chrome()
     print("\nTest 2 started")
@@ -41,7 +41,7 @@ def test_buy_product_2():
     time.sleep(3)
     driver.quit()
 
-@pytest.mark.order(2)
+#@pytest.mark.order(2)
 def test_buy_product_3():
     driver = webdriver.Chrome()
     print("\nTest 3 started")
